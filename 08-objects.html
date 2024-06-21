@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        name: 'socks',
+        price: 1000
+      };
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = 'shirt'; // to change a property.
+      console.log(product);
+
+      product.place = 'concord'; // to add a new property.
+      console.log(product);
+
+      delete product.place; // to delete a property.
+      console.log(product);
+
+      console.log(typeof product);
+
+      const product2 = {
+        price: 100,
+        'delivery-time': '2 days',
+        rating: {    // nested object
+          stars: 4.5,
+          count: 10
+        },
+        fun: function fun1() {
+          console.log('function inside object');
+        }
+      };
+      console.log(product2.price);
+      console.log(product2['price']); // does the same thing as dot notation
+      console.log(product2['delivery-time']);
+      console.log(product2.rating);
+      console.log(product2.rating.count);
+      product2.fun();
+
+      console.log(JSON.stringify(product2)); // converts to JSON
+      
+      const jsonString = JSON.stringify(product2);
+
+      console.log(JSON.parse(jsonString)); // convert to object
+
+      console.log('hello'.length); // 5
+      console.log('hello'.toUpperCase());
+
+      const object4 = {
+        message: 'good job',
+        price: 100
+      };
+
+      // destructering
+      // const message = object4.message;
+      const { message, price } = object4;
+      console.log(message);
+      console.log(price);
+
+      const object5 = {
+        message,
+        price,
+        // method: function function1() {
+        //   console.log('message');
+        // }
+        method() {
+          console.log('message');
+        }
+      }
+      object5.method();
+      
+    </script>
+  </body>
+</html>

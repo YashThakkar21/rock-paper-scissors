@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>
+  </head>
+  <body>
+    <script>
+
+      console.log(3 > 5);
+      
+      console.log(3 > 5 - 5);
+
+      console.log(3===3);
+
+      if (false) {
+        console.log('hello');
+      } 
+      else {
+        console.log('else');
+      }
+
+      const age = 15;
+
+      if (age >= 16) {
+        console.log('you can drive.');
+      }
+      else if (age >= 14) {
+        console.log('Almost there');
+      }
+      else {
+        console.log('you cannot drive.');
+    }
+
+    // ternary operators
+
+      // advantage over normal if-else statements is that it can saved to
+      // a variable.
+    const yo = true ? 'truly' : 'falsy';
+    console.log(yo);
+
+    // guard operator &&.
+    false && console.log('yaay'); // doesn't look at the code after && because the first value is false.
+    const message = 5 && 'hello'; // saves 'hello' in messsage.
+
+    // default operator ||.
+    const currency = 'EUR' || 'USD'; // assigns 'EUR' bc it short curcuits since the first value is true, the code does not look at the value after ||.
+
+    const money = undefined || 'USD'; // here 'USD' is a default value and will be assigned to money.
+
+    </script>
+  </body>
+</html>
